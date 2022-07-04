@@ -44,7 +44,6 @@ function FizzBuzz(N) {
     } else {
         console.log(N);
     }
-
 }
 FizzBuzz(N);
 
