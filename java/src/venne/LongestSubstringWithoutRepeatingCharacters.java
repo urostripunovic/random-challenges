@@ -66,7 +66,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 				if (visited[c] > 1) {
 					break;
 				} else {
-					longest = Math.max(longest, j - i + 1);
+					longest = j - i + 1 > longest ? j - i + 1 : longest;
 				}
 			}
 		}
