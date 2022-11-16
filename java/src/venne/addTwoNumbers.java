@@ -24,7 +24,7 @@ public class addTwoNumbers {
 	public static void main(String[] args) {
 	}
 	
-	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+	public static ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
         ListNode l = new ListNode(0);
         ListNode res = l;
         int carry = 0;
