@@ -1,6 +1,9 @@
 package venne;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -11,11 +14,19 @@ import java.util.Arrays;
 public class twoSum {
 
 	public static void main(String[] args) {
-		int[] arr = {3,2,4};
-		System.out.println("Svar: "+Arrays.toString(twoSum1(arr,6)));
+        new twoSum().run();
 	}
+
+    void run() {
+        int[] arr = {3,2,4};
+		System.out.println("Svar: "+Arrays.toString(On2(arr,6)));
+        System.out.println("Svar: "+Arrays.toString(lessThanOn2(arr,6)));
+        int[] arr2 = {2,7,11,15};
+		System.out.println("Svar: "+Arrays.toString(lessThanOn2(arr2,9)));
+    }
 	
-	public static int[] twoSum1(int[] nums, int target) {
+    //O(n^2)
+	public int[] On2(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i+1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
@@ -24,6 +35,20 @@ public class twoSum {
             }    
         }
         return null;
+    }
+
+    //less than O(n^2)
+    public int[] lessThanOn2(int[] nums, int target) {
+        Map<Integer,Integer> tracker = new TreeMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int comp = target - nums[i];
+            if (tracker.containsKey(comp)) 
+                return new int[]{tracker.get(comp), i};  
+            tracker.put(nums[i], i);
+        }
+
+        return new int[] {};
     }
 
 }
