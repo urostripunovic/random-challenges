@@ -1,4 +1,4 @@
-package venne;
+package easy;
 
 public class LongestSubstringWithoutRepeatingCharacters {
 
@@ -29,9 +29,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	}
 
 	/**
-	 * Vi vill lägga till character om den inte finns i build strängen.
-	 * Finns den, då vill vi ta bort förgående och börja om på nytt med den nya karaktären i strängen build. 
-	 * Tänk på att inte ta bort all efter, exempel 3 va en liten fälla
+	 * Vi vill lï¿½gga till character om den inte finns i build strï¿½ngen.
+	 * Finns den, dï¿½ vill vi ta bort fï¿½rgï¿½ende och bï¿½rja om pï¿½ nytt med den nya karaktï¿½ren i strï¿½ngen build. 
+	 * Tï¿½nk pï¿½ att inte ta bort all efter, exempel 3 va en liten fï¿½lla
 	 */
 	public static int lengthOfLongestSubstring(String s) {
 		int longest = -1;
@@ -43,7 +43,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 				build += c;
 				//System.out.println(build);
 			} else {
-				//build = build.replace(c, c); //vi får med unwanted characters
+				//build = build.replace(c, c); //vi fï¿½r med unwanted characters
 				build = build.substring(build.indexOf(c)+1)+c; 
 			}
 			longest = build.length() > longest ? build.length() : longest;
@@ -52,7 +52,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	}
 
 	/**
-	 * Twist på leets lösning av problemet
+	 * Twist pï¿½ leets lï¿½sning av problemet
 	 */
 	public static int lengthOfLongestSubstringTwist(String s) {
 		int longest = 0;

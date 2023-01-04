@@ -1,4 +1,4 @@
-package venne;
+package easy;
 import java.util.*;
 
 public interface Solver {

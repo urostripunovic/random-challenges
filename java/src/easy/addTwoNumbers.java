@@ -1,4 +1,4 @@
-package venne;
+package easy;
 public class addTwoNumbers {
 	
 	/**

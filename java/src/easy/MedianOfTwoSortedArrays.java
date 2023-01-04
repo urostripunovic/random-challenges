@@ -1,4 +1,4 @@
-package venne;
+package easy;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ public class MedianOfTwoSortedArrays {
 
 	/**
 	 * Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
-	 * The overall run time complexity should be O(log (m+n)) (Glömt helt hur big O fungerar så ba kör på).
+	 * The overall run time complexity should be O(log (m+n)) (Glï¿½mt helt hur big O fungerar sï¿½ ba kï¿½r pï¿½).
 	 * 
 	 * Example 1:
 	 * Input: nums1 = [1,3], nums2 = [2]
@@ -29,11 +29,11 @@ public class MedianOfTwoSortedArrays {
 		int i = 0, j = 0, k = 0; //i: nums1, j: nums2, k: mergedArr
 
 		/**
-		 * Så länge nums1 eller nums2 inte är "klara" så kör vi
-		 * Om nums1 inte har några elements kvar så lägg in alla från nums2
-		 * Eller om nums2 inte har några element kvar så lägg in alla från nums1
-		 * Eller om nums1 har ett längre värde än nums2 så lägg in den först
-		 * Annars lägg in nums2 för den är lägre än nums1
+		 * Sï¿½ lï¿½nge nums1 eller nums2 inte ï¿½r "klara" sï¿½ kï¿½r vi
+		 * Om nums1 inte har nï¿½gra elements kvar sï¿½ lï¿½gg in alla frï¿½n nums2
+		 * Eller om nums2 inte har nï¿½gra element kvar sï¿½ lï¿½gg in alla frï¿½n nums1
+		 * Eller om nums1 har ett lï¿½ngre vï¿½rde ï¿½n nums2 sï¿½ lï¿½gg in den fï¿½rst
+		 * Annars lï¿½gg in nums2 fï¿½r den ï¿½r lï¿½gre ï¿½n nums1
 		 */
 		while (i < nums1.length || j < nums2.length) {
 			if (i >= nums1.length) {
@@ -60,7 +60,7 @@ public class MedianOfTwoSortedArrays {
 	}
 	
 	/**
-	 * Den enklare vägen, inte mycket till problem lösning though.
+	 * Den enklare vï¿½gen, inte mycket till problem lï¿½sning though.
 	 */
 	public static double findMedianSortedArraysBs(int[] nums1, int[] nums2) {
 		int[] mergedArr = new int[nums1.length + nums2.length];
